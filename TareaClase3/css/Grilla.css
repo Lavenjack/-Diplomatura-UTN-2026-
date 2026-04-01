@@ -1,0 +1,51 @@
+.actividades-grilla h2 {
+  color: #333;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  gap: 20px;
+  padding: 20px;
+}
+
+.section {
+  align-items: center;
+
+  padding: 18px;
+}
+.tabla-grilla {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+
+  border: fuchsia solid 2px;
+
+  border-radius: 20px;
+  padding: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Bordes unidos */
+}
+table,
+th,
+td {
+  border: 1px solid fuchsia; /* Bordes negros */
+}
+th,
+td {
+  padding: 10px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto */
+}
+th {
+  background-color: #ebace7; /* Color de fondo encabezado */
+}
+
+.song-festival h3 {
+  display: flex;
+  justify-content: center;
+  padding: 10px 2px;
+}

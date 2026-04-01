@@ -1,0 +1,82 @@
+/* Reset y estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://www.xtrafondos.com/wallpapers/resized/programacion-computadora-y-lentes-10837.jpg?s=large");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header {
+  box-shadow: 0px 2px 20px rgb(34, 148, 201);
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  text-align: center;
+}
+.titulo {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 25px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.contenido {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans";
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 100%;
+  height: auto;
+}
+.sobre-mi {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  padding: 3rem;
+  margin: 3rem auto;
+  width: 100%;
+  height: auto;
+}
+.formulario {
+  border: 3px solid white;
+  border-radius: 8px;
+  border-color: turquoise;
+  padding: 1.5rem;
+  width: 350px;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+}
+
+.formulario h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 5.5rem;
+  color: white;
+}

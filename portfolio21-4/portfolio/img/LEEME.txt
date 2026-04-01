@@ -1,0 +1,19 @@
+CARPETA DE IMÁGENES
+====================
+
+Guardá acá todas las imágenes del portfolio.
+
+CONVENCIÓN DE NOMBRES SUGERIDA:
+  proyecto-juegos-historicos.png   → screenshot del proyecto Juegos Históricos
+  proyecto-[nombre].png            → screenshots de proyectos futuros
+  avatar.jpg                       → foto de perfil (opcional)
+
+CÓMO USAR UNA IMAGEN EN EL HTML:
+  Reemplazá el bloque <div class="project-img-placeholder"> por:
+  <img src="img/proyecto-juegos-historicos.png" alt="Juegos Históricos" class="project-img" />
+
+TAMAÑO RECOMENDADO:
+  Ancho: 900px o más
+  Alto: ~460px (ratio 2:1 aprox.)
+  Formato: PNG o JPG
+  Peso: menos de 300kb si es posible
