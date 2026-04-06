@@ -9,14 +9,30 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>SisterMKUP</title>
+    <script>
+      history.scrollRestoration = "manual";
+      window.scrollTo(0, 0);
+      if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/361ef98789.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <nav>
-        <a class="nav-logo" href="#hero">SisterMKUP</a>
+        <a class="nav-logo" href="#hero">SistersMKUP</a>
         <ul>
           <li><a href="#contacto">Contacto</a></li>
           <li><a href="galeria.html">Galería</a></li>
+          <li>
+            <a href="https://www.instagram.com/sisters.mkp/">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -28,7 +44,7 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-          <h1 class="hero-title">Bienvenidas a<br /><em>SisterMKUP</em></h1>
+          <h1 class="hero-title">Bienvenidas a<br /><em>SistersMKUP</em></h1>
           <p class="hero-sub">
             Somos Cami y Estefi, dos hermanas que comparten su pasión por el
             makeup. Transformamos cada mirada en una obra de arte.
@@ -55,7 +71,7 @@
           </div>
           <div class="card">
             <img src="../img/card-galery4.jpg" alt="Servicio 2" />
-            <h4>Maquillaje Fiesta</h4>
+            <h4>Maquillaje Social</h4>
             <p>
               Potenciar la belleza natural con un toque sofisticado, intenso o
               brillante, equilibrando ojos, piel y labios para destacar bajo
@@ -84,13 +100,92 @@
       </div>
 
       <!-- Sección contacto -->
+
       <section class="contacto" id="contacto">
         <h4>Contacto</h4>
-        <p>
-          Si deseas contactarnos, puedes hacerlo a través de nuestras redes
-          sociales o enviándonos un correo electrónico a
-          <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a>
+        <p class="contacto-intro">
+          Si deseas contactarnos, completá el siguiente formulario o envianos un
+          correo a
+          <a href="mailto:SistersMKUP@gmail.com">SistersMKUP@gmail.com</a>
         </p>
+
+        <form class="contacto-form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required />
+          </div>
+
+          <div class="form-group">
+            <label for="servicio">Servicio de interés</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">Seleccioná una opción</option>
+              <option value="maquillaje-social">Maquillaje social</option>
+              <option value="maquillaje-novia">Maquillaje de novia</option>
+              <option value="maquillaje-artistico">Maquillaje artístico</option>
+              <option value="maquillaje-editorial">Maquillaje editorial</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>¿Cómo nos conociste?</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="conocimiento"
+                  value="redes-sociales"
+                  required
+                />
+                Redes sociales
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="conocimiento" value="recomendacion" />
+                Recomendación
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="conocimiento" value="buscador" />
+                Buscador web
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="conocimiento" value="otro" />
+                Otro
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="comentario">Comentario o consulta</label>
+            <textarea
+              id="comentario"
+              name="comentario"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="newsletter" />
+              Deseo recibir novedades y promociones
+            </label>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn-submit">Enviar</button>
+            <button type="reset" class="btn-reset">Limpiar</button>
+          </div>
+        </form>
       </section>
 
       <div class="divider"></div>

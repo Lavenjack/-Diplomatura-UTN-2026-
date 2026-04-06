@@ -21,13 +21,18 @@ body {
   color: var(--cream);
 }
 
+header {
+  position: static;
+  z-index: 10;
+}
+
 /* ========== NAVEGACIÓN ========== */
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,23 +67,32 @@ nav ul {
 }
 
 nav a:not(.nav-logo) {
-  font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: 0.06em;
-  color: var(--blush);
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.8rem;
+  background: transparent;
+  color: var(--rose);
+  border: 1px solid var(--rose);
   text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  transition: color 0.3s;
+  border-radius: 2px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
 }
 
 nav a:not(.nav-logo):hover {
-  color: var(--rose);
+  background: var(--rose);
+  color: var(--cream);
 }
 
 /* ========== SECCIÓN HERO ========== */
 .hero {
-  position: relativ;
+  position: static;
   min-height: 100vh;
+  z-index: 30;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -87,6 +101,7 @@ nav a:not(.nav-logo):hover {
 
 .hero-bg {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   background-image: url("../img/hero-section.jpg");
@@ -139,6 +154,7 @@ nav a:not(.nav-logo):hover {
   padding: 2rem;
   animation: slideUp 1.2s ease forwards;
   opacity: 0;
+  margin-bottom: 60px;
 }
 
 @keyframes slideUp {
@@ -350,14 +366,208 @@ a:hover {
   margin: 0 auto;
 }
 
-/* ========== SECCIÓN CONTACTO ========== */
+/* ========== SECCIÓN CONTACTO ========== 
 .contacto {
-  text-align: center;
+  text-align: none;
+  
 }
 
 .contacto p {
   max-width: 600px;
   margin: 0 auto;
+}
+*/
+/* ========== FORMULARIO DE CONTACTO ========== */
+.contacto-intro {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.contacto-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--blush);
+  margin-bottom: 0.6rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  background: rgba(232, 196, 178, 0.05);
+  border: 1px solid rgba(201, 146, 122, 0.3);
+  border-radius: 2px;
+  color: var(--cream);
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(232, 196, 178, 0.4);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--rose);
+  background: rgba(232, 196, 178, 0.08);
+  box-shadow: 0 0 0 3px rgba(201, 146, 122, 0.1);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23e8c4b2' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+}
+
+.form-group select option {
+  background-color: var(--charcoal);
+  color: var(--cream);
+  padding: 0.5rem;
+}
+
+.form-group select option:hover {
+  background-color: var(--rose);
+  color: var(--cream);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--blush);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: color 0.3s ease;
+}
+
+.radio-label:hover {
+  color: var(--rose);
+}
+
+.radio-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--rose);
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox-group {
+  margin-top: 1.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--blush);
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--rose);
+  cursor: pointer;
+}
+
+/* Botones del formulario */
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.btn-submit,
+.btn-reset {
+  flex: 1;
+  padding: 0.9rem 2rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, var(--rose), #b08268);
+  color: var(--cream);
+  box-shadow: 0 4px 16px rgba(201, 146, 122, 0.25);
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201, 146, 122, 0.35);
+  background: linear-gradient(135deg, #b08268, var(--rose));
+}
+
+.btn-reset {
+  background: transparent;
+  color: var(--rose);
+  border: 1px solid var(--rose);
+}
+
+.btn-reset:hover {
+  background: rgba(201, 146, 122, 0.1);
+  border-color: var(--blush);
+  color: var(--blush);
+}
+
+/* Responsive para formulario */
+@media (max-width: 480px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .radio-group {
+    gap: 1rem;
+  }
 }
 
 /* ========== FOOTER ========== */
