@@ -96,7 +96,7 @@ main {
 }
 
 .gallery-eyebrow {
-  font-size: 0.75rem;
+  font-size: 3rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--blush);
@@ -115,8 +115,7 @@ main {
 }
 
 .gallery-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.5rem;
   color: var(--blush);
   font-weight: 300;
   opacity: 0.9;
@@ -251,6 +250,7 @@ main {
 
 /* ========== FOOTER ========== */
 footer {
+  font-size: 1.2rem;
   text-align: center;
   padding: 2rem;
   background: rgba(26, 22, 20, 0.8);
@@ -259,7 +259,6 @@ footer {
 }
 
 footer p {
-  font-size: 0.85rem;
   color: var(--blush);
   opacity: 0.7;
 }

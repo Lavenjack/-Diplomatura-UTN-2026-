@@ -67,7 +67,7 @@ nav ul {
 }
 
 nav a:not(.nav-logo) {
-  padding: 0.7rem 1.8rem;
+  padding: 0.7rem 1rem;
   background: transparent;
   color: var(--rose);
   border: 1px solid var(--rose);
@@ -339,6 +339,16 @@ a:hover {
 /* ========== SECCIÓN GALERÍA INTRO ========== */
 .galeria-intro {
   text-align: center;
+  padding: 4rem 2rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.galeria-intro h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 1rem;
 }
 
 .galeria-intro p {
@@ -348,14 +358,15 @@ a:hover {
 
 /* ========== SECCIÓN CONTACTO ========== */
 .contacto {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 1rem 4rem;
 }
 
 .contacto h4 {
   text-align: center;
   margin-bottom: 2rem;
+  letter-spacing: 0.1em;
 }
 
 .contacto-child {
@@ -367,13 +378,16 @@ a:hover {
 
 /* ========== FORMULARIO DE CONTACTO ========== */
 .contacto-intro {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0;
 }
 
 .contacto-form {
-  width: 100%;
-  max-width: 500px;
+  width: 600px;
+  border: var(--blush) solid 1px;
+  padding: 2rem;
+  border-radius: 4px;
+  background: rgba(232, 196, 178, 0.05);
 }
 
 .form-group {
@@ -556,6 +570,7 @@ a:hover {
 }
 /* ========== FOOTER ========== */
 footer {
+  font-size: 1.2rem;
   text-align: center;
   padding: 2rem;
   background: rgba(26, 22, 20, 0.8);
@@ -563,7 +578,6 @@ footer {
 }
 
 footer p {
-  font-size: 0.85rem;
   color: var(--blush);
   opacity: 0.7;
 }
