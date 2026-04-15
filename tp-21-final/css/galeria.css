@@ -67,7 +67,7 @@ nav a:not(.nav-logo) {
   color: var(--rose);
   border: 1px solid var(--rose);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 1.4rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 2px;
@@ -148,7 +148,7 @@ main {
   overflow: hidden;
   border-radius: 4px;
   aspect-ratio: 3/4;
-  cursor: pointer;
+
   border: 1px solid rgba(201, 146, 122, 0.1);
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }

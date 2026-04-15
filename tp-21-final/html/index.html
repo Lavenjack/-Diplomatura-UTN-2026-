@@ -9,13 +9,7 @@
     />
     <link rel="stylesheet" href="../css/style.css" />
     <title>SisterMKUP</title>
-    <script>
-      history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
-      if (window.location.hash) {
-        history.replaceState(null, null, window.location.pathname);
-      }
-    </script>
+
     <script
       src="https://kit.fontawesome.com/361ef98789.js"
       crossorigin="anonymous"
@@ -57,7 +51,6 @@
             Somos Cami y Estefi, dos hermanas que comparten su pasión por el
             makeup. Transformamos cada mirada en una obra de arte.
           </p>
-          <a href="galeria.html" class="hero-cta"><span>Ver galería</span></a>
         </div>
       </section>
 
@@ -111,89 +104,99 @@
 
       <section class="contacto" id="contacto">
         <h4>Contacto</h4>
-        <p class="contacto-intro">
-          Si deseas contactarnos, completá el siguiente formulario o envianos un
-          correo a
-          <a href="mailto:SistersMKUP@gmail.com">SistersMKUP@gmail.com</a>
-        </p>
+        <div class="contacto-child">
+          <p class="contacto-intro">
+            Si deseas contactarnos, completá el siguiente formulario o envianos
+            un correo a
+            <a href="mailto:SistersMKUP@gmail.com">SistersMKUP@gmail.com</a>
+          </p>
 
-        <form class="contacto-form">
-          <div class="form-group">
-            <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" required />
-          </div>
+          <form class="contacto-form">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
 
-          <div class="form-group">
-            <label for="telefono">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required />
-          </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required />
+            </div>
 
-          <div class="form-group">
-            <label for="servicio">Servicio de interés</label>
-            <select id="servicio" name="servicio" required>
-              <option value="none">Seleccioná una opción</option>
-              <option value="maquillaje-social">Maquillaje social</option>
-              <option value="maquillaje-novia">Maquillaje de novia</option>
-              <option value="maquillaje-artistico">Maquillaje artístico</option>
-              <option value="maquillaje-editorial">Maquillaje editorial</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="servicio">Servicio de interés</label>
+              <select id="servicio" name="servicio" required>
+                <option value="none">Seleccioná una opción</option>
+                <option value="maquillaje-social">Maquillaje social</option>
+                <option value="maquillaje-novia">Maquillaje de novia</option>
+                <option value="maquillaje-artistico">
+                  Maquillaje artístico
+                </option>
+                <option value="maquillaje-editorial">
+                  Maquillaje editorial
+                </option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
 
-          <div class="form-group">
-            <label>¿Cómo nos conociste?</label>
-            <div class="radio-group">
-              <label class="radio-label">
-                <input
-                  type="radio"
-                  name="conocimiento"
-                  value="redes-sociales"
-                  required
-                />
-                Redes sociales
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="conocimiento" value="recomendacion" />
-                Recomendación
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="conocimiento" value="buscador" />
-                Buscador web
-              </label>
-              <label class="radio-label">
-                <input type="radio" name="conocimiento" value="otro" />
-                Otro
+            <div class="form-group">
+              <label>¿Cómo nos conociste?</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="conocimiento"
+                    value="redes-sociales"
+                    required
+                  />
+                  Redes sociales
+                </label>
+                <label class="radio-label">
+                  <input
+                    type="radio"
+                    name="conocimiento"
+                    value="recomendacion"
+                  />
+                  Recomendación
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="conocimiento" value="buscador" />
+                  Buscador web
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="conocimiento" value="otro" />
+                  Otro
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="comentario">Comentario o consulta</label>
+              <textarea
+                id="comentario"
+                name="comentario"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="newsletter" />
+                Deseo recibir novedades y promociones
               </label>
             </div>
-          </div>
 
-          <div class="form-group">
-            <label for="comentario">Comentario o consulta</label>
-            <textarea
-              id="comentario"
-              name="comentario"
-              rows="5"
-              required
-            ></textarea>
-          </div>
-
-          <div class="form-group checkbox-group">
-            <label class="checkbox-label">
-              <input type="checkbox" name="newsletter" />
-              Deseo recibir novedades y promociones
-            </label>
-          </div>
-
-          <div class="form-buttons">
-            <button type="submit" class="btn-submit">Enviar</button>
-            <button type="reset" class="btn-reset">Limpiar</button>
-          </div>
-        </form>
+            <div class="form-buttons">
+              <button type="submit" class="btn-submit">Enviar</button>
+              <button type="reset" class="btn-reset">Limpiar</button>
+            </div>
+          </form>
+        </div>
       </section>
 
       <div class="divider"></div>
