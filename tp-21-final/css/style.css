@@ -357,7 +357,13 @@ a:hover {
 }
 
 /* ========== SECCIÓN CONTACTO ========== */
+
 .contacto {
+  background-image: url("../img/hero-section.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   max-width: 1800px;
   margin: 0 auto;
   padding: 1rem 4rem;
