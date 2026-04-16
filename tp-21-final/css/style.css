@@ -338,10 +338,22 @@ a:hover {
 
 /* ========== SECCIÓN GALERÍA INTRO ========== */
 .galeria-intro {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 4rem 2rem 3rem;
   max-width: 800px;
   margin: 0 auto;
+}
+.galeria-hero {
+  background-image: url("../img/hero-form.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 400px;
+  border-radius: 8px;
+  margin-bottom: 3rem;
 }
 
 .galeria-intro h3 {
@@ -359,11 +371,6 @@ a:hover {
 /* ========== SECCIÓN CONTACTO ========== */
 
 .contacto {
-  background-image: url("../img/hero-section.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
   max-width: 1800px;
   margin: 0 auto;
   padding: 1rem 4rem;
