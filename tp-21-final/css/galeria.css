@@ -1,63 +1,11 @@
 @import url(bases.css);
 
-/* ========== NAVEGACIÓN ========== */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 5%;
-  background: rgba(26, 22, 20, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(201, 146, 122, 0.1);
-}
-
-.nav-logo {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  color: var(--cream);
-  text-decoration: none;
-  font-style: italic;
-  transition: color 0.3s;
-}
-
-.nav-logo:hover {
-  color: var(--rose);
-}
-
-nav ul {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-nav a:not(.nav-logo) {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.8rem;
-  background: transparent;
-  color: var(--rose);
-  border: 1px solid var(--rose);
-  text-decoration: none;
-  font-size: 1.4rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 2px;
-  transition: all 0.3s;
-  cursor: pointer;
-  font-family: "Jost", sans-serif;
-}
-
-nav a:not(.nav-logo):hover {
-  background: var(--rose);
-  color: var(--cream);
-  border-color: var(--rose);
+  position: fixed; /* Diferente */
+  z-index: 1000; /* Diferente */
+  background: rgba(26, 22, 20, 0.95); /* Diferente */
+  backdrop-filter: blur(8px); /* Diferente */
+  border-bottom: 1px solid rgba(201, 146, 122, 0.1); /* Diferente */
 }
 
 /* ========== MAIN CONTENT ========== */

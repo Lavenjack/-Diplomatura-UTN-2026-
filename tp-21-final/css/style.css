@@ -1,74 +1,9 @@
 @import url(bases.css);
 
-/* ========== NAVEGACIÓN ========== */
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.8rem 5%;
-  background: linear-gradient(
-    to bottom,
-    rgba(26, 22, 20, 0.95),
-    rgba(26, 22, 20, 0)
-  );
-  backdrop-filter: blur(4px);
-}
 
-.nav-logo {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.7rem;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  color: var(--cream);
-  text-decoration: none;
-  font-style: italic;
-  transition: color 0.3s;
-}
-
-.nav-logo:hover {
-  color: var(--rose);
-}
-
-nav ul {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-nav a:not(.nav-logo) {
-  padding: 0.7rem 1rem;
-  background: transparent;
-  color: var(--rose);
-  border: 1px solid var(--rose);
-  text-decoration: none;
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 2px;
-  transition: all 0.3s;
-  cursor: pointer;
-  font-family: "Jost", sans-serif;
-}
-
-nav a:not(.nav-logo):hover {
-  background: var(--rose);
-  color: var(--cream);
-}
-
-.fab .fa-instagram {
-  font-size: 1.2rem;
-  color: var(--rose);
-  transition: color 0.3s;
-}
 /* ========== SECCIÓN HERO ========== */
 .hero {
   min-height: 100vh;
-
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -103,23 +38,6 @@ nav a:not(.nav-logo):hover {
       rgba(201, 146, 122, 0.08),
       transparent 70%
     );
-}
-
-.hero-line {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 46%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--blush) 20%,
-    var(--blush) 80%,
-    transparent
-  );
-  opacity: 0.3;
-  animation: fadeIn 1.8s ease 0.5s forwards;
 }
 
 .hero-content {
@@ -173,64 +91,6 @@ nav a:not(.nav-logo):hover {
   max-width: 540px;
   margin: 0 auto 2.5rem;
   opacity: 0.95;
-}
-
-/* ========== UTILIDADES REUTILIZABLES ========== */
-.divider {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-}
-
-.divider hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--rose) 50%,
-    transparent
-  );
-  opacity: 0.3;
-}
-
-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: var(--cream);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-h4 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.8rem;
-  font-weight: 400;
-  color: var(--rose);
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--blush);
-  font-weight: 300;
-}
-
-a {
-  color: var(--rose);
-  transition: color 0.3s;
-}
-
-a:hover {
-  color: var(--blush);
 }
 
 /* ========== SECCIÓN SERVICIOS ========== */
@@ -321,9 +181,13 @@ a:hover {
 /* ========== SECCIÓN CONTACTO ========== */
 
 .contacto {
-  max-width: 1800px;
+  min-height: 100vh; 
+  max-width: 1400px; 
   margin: 0 auto;
-  padding: 1rem 4rem;
+  padding: 2rem; 
+  display: flex; 
+  flex-direction: column; /
+  justify-content: center; 
 }
 
 .contacto h4 {
@@ -335,8 +199,12 @@ a:hover {
 .contacto-child {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 3rem;                    
+  align-items: flex-start;      
+  justify-content: center;      
 }
+
+
 
 /* ========== FORMULARIO DE CONTACTO ========== */
 .contacto-intro {
@@ -345,7 +213,9 @@ a:hover {
 }
 
 .contacto-form {
-  width: 600px;
+  width: 100%;
+  max-width: 500px;
+  
   border: var(--blush) solid 1px;
   padding: 2rem;
   border-radius: 4px;
@@ -353,12 +223,12 @@ a:hover {
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form-group label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -372,7 +242,7 @@ a:hover {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 0.4rem;
+  padding: 0.7rem 1rem;
   background: rgba(232, 196, 178, 0.05);
   border: 1px solid rgba(201, 146, 122, 0.3);
   border-radius: 2px;
@@ -427,7 +297,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: var(--blush);
   cursor: pointer;
@@ -454,7 +324,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 300;
   color: var(--blush);
   cursor: pointer;
@@ -516,13 +386,19 @@ a:hover {
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 768px) {
+  .contacto {
+    min-height: auto;        /* ✅ Quitar restricción 100vh en mobile */
+    padding: 3rem 1.5rem;    /* ✅ Padding responsive */
+  }
+  
   .contacto-child {
+    flex-direction: column;  /* ✅ Apilar verticalmente */
     align-items: center;
   }
 
   .contacto-intro,
   .contacto-form {
-    max-width: 100%;
+    max-width: 100%;         /* ✅ Ancho completo en mobile */
   }
 
   nav {
