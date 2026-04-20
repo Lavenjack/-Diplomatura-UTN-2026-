@@ -1,30 +1,4 @@
-/* ========== RESET & VARIABLES ========== */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --rose: #c9927a;
-  --blush: #e8c4b2;
-  --cream: #f5ede6;
-  --charcoal: #1a1614;
-  --overlay: rgba(20, 14, 12, 0.52);
-}
-
-body {
-  font-family: "Jost", sans-serif;
-  background: var(--charcoal);
-  color: var(--cream);
-}
-
-header {
-  position: static;
-  z-index: 10;
-}
+@import url(bases.css);
 
 /* ========== NAVEGACIÓN ========== */
 nav {
@@ -47,7 +21,7 @@ nav {
 
 .nav-logo {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 300;
   letter-spacing: 0.1em;
   color: var(--cream);
@@ -86,16 +60,15 @@ nav a:not(.nav-logo):hover {
   color: var(--cream);
 }
 
-.fab .fa-instagram .icono {
+.fab .fa-instagram {
   font-size: 1.2rem;
   color: var(--rose);
   transition: color 0.3s;
 }
 /* ========== SECCIÓN HERO ========== */
 .hero {
-  position: static;
   min-height: 100vh;
-  z-index: 30;
+
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -200,29 +173,6 @@ nav a:not(.nav-logo):hover {
   max-width: 540px;
   margin: 0 auto 2.5rem;
   opacity: 0.95;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--blush);
-  opacity: 0.6;
-  animation: float 2.5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translate(-50%, 0);
-  }
-  50% {
-    transform: translate(-50%, 8px);
-  }
 }
 
 /* ========== UTILIDADES REUTILIZABLES ========== */
@@ -384,9 +334,8 @@ a:hover {
 
 .contacto-child {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* ========== FORMULARIO DE CONTACTO ========== */
@@ -423,7 +372,7 @@ a:hover {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 0.9rem 1.2rem;
+  padding: 0.4rem;
   background: rgba(232, 196, 178, 0.05);
   border: 1px solid rgba(201, 146, 122, 0.3);
   border-radius: 2px;
@@ -464,7 +413,7 @@ a:hover {
 
 .form-group textarea {
   resize: vertical;
-  min-height: 100px;
+  height: 85px;
 }
 
 /* Radio buttons */
@@ -564,7 +513,8 @@ a:hover {
   color: var(--blush);
 }
 
-/* Responsive */
+/* ========== RESPONSIVE ========== */
+
 @media (max-width: 768px) {
   .contacto-child {
     align-items: center;
@@ -574,29 +524,7 @@ a:hover {
   .contacto-form {
     max-width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .form-buttons {
-    flex-direction: column;
-  }
-}
-/* ========== FOOTER ========== */
-footer {
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 2rem;
-  background: rgba(26, 22, 20, 0.8);
-  border-top: 1px solid rgba(201, 146, 122, 0.2);
-}
-
-footer p {
-  color: var(--blush);
-  opacity: 0.7;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
   nav {
     padding: 1.2rem 4%;
   }
@@ -620,5 +548,11 @@ footer p {
 
   .divider {
     margin: 3rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-buttons {
+    flex-direction: column;
   }
 }
