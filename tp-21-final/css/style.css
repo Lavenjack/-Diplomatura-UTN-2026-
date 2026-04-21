@@ -1,6 +1,5 @@
 @import url(bases.css);
 
-
 /* ========== SECCIÓN HERO ========== */
 .hero {
   min-height: 100vh;
@@ -181,13 +180,13 @@
 /* ========== SECCIÓN CONTACTO ========== */
 
 .contacto {
-  min-height: 100vh; 
-  max-width: 1400px; 
+  min-height: 100vh;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem; 
-  display: flex; 
-  flex-direction: column; /
-  justify-content: center; 
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contacto h4 {
@@ -199,12 +198,10 @@
 .contacto-child {
   display: flex;
   flex-direction: row;
-  gap: 3rem;                    
-  align-items: flex-start;      
-  justify-content: center;      
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
 }
-
-
 
 /* ========== FORMULARIO DE CONTACTO ========== */
 .contacto-intro {
@@ -215,7 +212,7 @@
 .contacto-form {
   width: 100%;
   max-width: 500px;
-  
+
   border: var(--blush) solid 1px;
   padding: 2rem;
   border-radius: 4px;
@@ -387,18 +384,18 @@
 
 @media (max-width: 768px) {
   .contacto {
-    min-height: auto;        /* ✅ Quitar restricción 100vh en mobile */
-    padding: 3rem 1.5rem;    /* ✅ Padding responsive */
+    min-height: auto; /* ✅ Quitar restricción 100vh en mobile */
+    padding: 3rem 1.5rem; /* ✅ Padding responsive */
   }
-  
+
   .contacto-child {
-    flex-direction: column;  /* ✅ Apilar verticalmente */
+    flex-direction: column; /* ✅ Apilar verticalmente */
     align-items: center;
   }
 
   .contacto-intro,
   .contacto-form {
-    max-width: 100%;         /* ✅ Ancho completo en mobile */
+    max-width: 100%; /* ✅ Ancho completo en mobile */
   }
 
   nav {
